@@ -12,10 +12,9 @@ class Users extends Component {
 
     return (
       <div>
+        {this.props.userCount}
         <ul>
           {users}
-          {/* Write code here that displays the usernames of all users in the Redux store */}
-          {/* In addition, display the total number of users curently in the store */}
         </ul>
       </div>
     )
@@ -26,7 +25,7 @@ class Users extends Component {
 const mapStateToProps = (state) => {
   return {
     users: state.users,
-    numberOfUsers: state.users.length
+    userCount: state.users.length
   };
 };
 // connect this component to Redux
